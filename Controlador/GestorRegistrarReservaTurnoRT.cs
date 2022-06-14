@@ -100,7 +100,7 @@ namespace PPAI_Implementacion.Gestor
         public void ObtenerTurnosReservablesRTSeleccionado()
         {
             List<Turno> listaTodosTurnos = rtSeleccionado.GetTurnos();
-            cientificoLogueado = ObtenerCientificoLogueado();
+            cientificoLogueado = BuscarCienfiticoLogueadol();
             int hrsAntelacion = ValidarPertenenciaCI(cientificoLogueado);
             ObtenerFechaHoraActual();
             //Mostrar turnos primero
@@ -112,7 +112,7 @@ namespace PPAI_Implementacion.Gestor
             pantallaReserva.SolicitarSeleccionTurno(listaTurnosPorDia);
         }
 
-        public PersonalCientifico ObtenerCientificoLogueado()
+        public PersonalCientifico BuscarCienfiticoLogueadol()
         {
             return UsuarioDao.Instancia().GetSesionActual().ObtenerCientificoLogueado();
         }

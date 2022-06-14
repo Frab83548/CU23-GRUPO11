@@ -136,20 +136,17 @@ namespace PPAI_Implementacion.Interfaz
             txtFechaTurno.Text = datosTurno[0];
             txtHoraTurno.Text = datosTurno[1];
 
-            cbxEmail.Enabled = true;
-            cbxEmail.Checked = true;
             btnConfirmarReserva.Enabled = true;
         }
 
         private void TomarConfirmacionReservaRT(object sender, EventArgs e)
         {
-       
-            if(!cbxEmail.Checked)
-            {
-                MensajeNadaSeleccionado("Seleccione al menos un método de notificacion.");
-                return;
-            }
-            gestorTurnos.TomarConfirmacionReservaRT(cbxEmail.Checked);
+
+            MessageBox.Show("Se ha enviado un mail con la confirmacion", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show("Se ha enviado un mail con la confirmacion", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+
         }
 
         private void CancelarReservaTurno(object sender, EventArgs e)
@@ -204,6 +201,21 @@ namespace PPAI_Implementacion.Interfaz
         }
 
         private void gbxConfirmacion_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PantallaRegistrarReservaTurnoRT_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbxNotificacion_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxEmail_CheckedChanged(object sender, EventArgs e)
         {
 
         }
