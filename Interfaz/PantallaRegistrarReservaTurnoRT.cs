@@ -142,8 +142,11 @@ namespace PPAI_Implementacion.Interfaz
         private void TomarConfirmacionReservaRT(object sender, EventArgs e)
         {
 
-            MessageBox.Show("Se ha enviado un mail con la confirmacion", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
             MensajeCUFin();
+            MessageBox.Show("Se ha enviado un mail con la confirmacion", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            Environment.Exit(0);
+
 
 
 
@@ -197,7 +200,7 @@ namespace PPAI_Implementacion.Interfaz
         public void MensajeCUFin()
         {
             MessageBox.Show("Turno registrado con éxito.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+           
         }
 
         private void gbxConfirmacion_Enter(object sender, EventArgs e)
