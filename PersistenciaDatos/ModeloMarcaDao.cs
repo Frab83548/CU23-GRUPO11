@@ -16,22 +16,22 @@ namespace PPAI_Implementacion.ObtencionDatos
         public ModeloMarcaDao()
         {
             listaModelos = new List<Modelo>();
-            listaModelos.Add(new Modelo("A0000"));
-            listaModelos.Add(new Modelo("A0001"));
+            listaModelos.Add(new Modelo("823RF"));
+            listaModelos.Add(new Modelo("CC001"));
             listaModelos.Add(new Modelo("BB008"));
-            listaModelos.Add(new Modelo("BBC25"));
-            listaModelos.Add(new Modelo("CGS87"));
-            listaModelos.Add(new Modelo("AGHAA"));
+            listaModelos.Add(new Modelo("XXDF5"));
+            listaModelos.Add(new Modelo("DFS87"));
+            listaModelos.Add(new Modelo("HAADS"));
             listaModelos.Add(new Modelo("TSX8A"));
-            listaModelos.Add(new Modelo("LO97A"));
-            listaModelos.Add(new Modelo("AAVHA"));
+            listaModelos.Add(new Modelo("LO10A0"));
+            listaModelos.Add(new Modelo("AASDF"));
             listaModelos.Add(new Modelo("ALO5A"));
             listaModelos.Add(new Modelo("823TA"));
 
             listaMarcas = new List<Marca>();
-            listaMarcas.Add(new Marca("Yamaha", new List<Modelo>() { listaModelos[0], listaModelos[5], listaModelos[7] }));
-            listaMarcas.Add(new Marca("Berling", new List<Modelo>() { listaModelos[8], listaModelos[2], listaModelos[6], listaModelos[9] }));
-            listaMarcas.Add(new Marca("Fourier", new List<Modelo>() { listaModelos[1], listaModelos[3], listaModelos[4] }));
+            listaMarcas.Add(new Marca("Toshiba", new List<Modelo>() { listaModelos[0], listaModelos[5], listaModelos[7] }));
+            listaMarcas.Add(new Marca("SONY", new List<Modelo>() { listaModelos[8], listaModelos[2], listaModelos[6], listaModelos[9] }));
+            listaMarcas.Add(new Marca("LG", new List<Modelo>() { listaModelos[1], listaModelos[3], listaModelos[4] }));
         }
 
         public static ModeloMarcaDao Instancia()

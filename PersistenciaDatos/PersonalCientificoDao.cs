@@ -15,9 +15,9 @@ namespace PPAI_Implementacion.ObtencionDatos
         public PersonalCientificoDao()
         {
             listaCientificos = new List<PersonalCientifico>();
-            listaCientificos.Add(new PersonalCientifico("a@utn.frc.edu.ar", "351836452", UsuarioDao.Instancia().GetUsuarios()[0]));
-            listaCientificos.Add(new PersonalCientifico("b@gmail.com", "351584602", UsuarioDao.Instancia().GetUsuarios()[1]));
-            listaCientificos.Add(new PersonalCientifico("c@hotmail.com.ar", "3548752452", UsuarioDao.Instancia().GetUsuarios()[2]));
+            listaCientificos.Add(new PersonalCientifico("c@gmail.com", "3888436452", UsuarioDao.Instancia().GetUsuarios()[0]));
+            listaCientificos.Add(new PersonalCientifico("s@gmail.com", "387584602", UsuarioDao.Instancia().GetUsuarios()[1]));
+            listaCientificos.Add(new PersonalCientifico("d@gmail.com", "351852452", UsuarioDao.Instancia().GetUsuarios()[2]));
         }
 
         public static PersonalCientificoDao Instancia()

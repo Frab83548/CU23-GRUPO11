@@ -18,7 +18,7 @@ namespace PPAI_Implementacion.ObtencionDatos
             List<RecursoTecnologico> recursos = RecursoTecnologicoDao.Instancia().ObtenerRecursos();
 
             listaCentros.Add(new CentroDeInvestigacion("Ciencias quimicas", 2, new List<AsignacionCientificoDelCI>(), new List<RecursoTecnologico>() { recursos[1], recursos[5], recursos[3], recursos[9] }));
-            listaCentros.Add(new CentroDeInvestigacion("Ciencias biologicas", 20, new List<AsignacionCientificoDelCI>(), new List<RecursoTecnologico>() { recursos[0], recursos[2], recursos[8] }));
+            listaCentros.Add(new CentroDeInvestigacion("Ciencias biologicas", 12, new List<AsignacionCientificoDelCI>(), new List<RecursoTecnologico>() { recursos[0], recursos[2], recursos[8] }));
             listaCentros.Add(new CentroDeInvestigacion("FAMAF", 19, new List<AsignacionCientificoDelCI>(), new List<RecursoTecnologico>() { recursos[4], recursos[6], recursos[7] }));
         }
 
