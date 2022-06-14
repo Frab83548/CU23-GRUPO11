@@ -99,14 +99,14 @@ namespace PPAI_Implementacion.Interfaz
             this.gbxTipoRecurso.Controls.Add(this.btnTipoRecurso);
             this.gbxTipoRecurso.Controls.Add(this.lblTipoRecurso);
             this.gbxTipoRecurso.Controls.Add(this.cbxTipoRecurso);
-            this.gbxTipoRecurso.Location = new System.Drawing.Point(16, 15);
+            this.gbxTipoRecurso.Location = new System.Drawing.Point(1, 3);
             this.gbxTipoRecurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxTipoRecurso.Name = "gbxTipoRecurso";
             this.gbxTipoRecurso.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxTipoRecurso.Size = new System.Drawing.Size(743, 84);
+            this.gbxTipoRecurso.Size = new System.Drawing.Size(717, 142);
             this.gbxTipoRecurso.TabIndex = 2;
             this.gbxTipoRecurso.TabStop = false;
-            this.gbxTipoRecurso.Text = "Seleccionar Tipo de Recurso";
+            this.gbxTipoRecurso.Text = "Seleccionar un tipo de recurso";
             // 
             // btnTipoRecurso
             // 
@@ -116,7 +116,7 @@ namespace PPAI_Implementacion.Interfaz
             this.btnTipoRecurso.Name = "btnTipoRecurso";
             this.btnTipoRecurso.Size = new System.Drawing.Size(165, 28);
             this.btnTipoRecurso.TabIndex = 2;
-            this.btnTipoRecurso.Text = "Buscar Recursos Tipo";
+            this.btnTipoRecurso.Text = "Buscar Recursos ";
             this.btnTipoRecurso.UseVisualStyleBackColor = true;
             this.btnTipoRecurso.Click += new System.EventHandler(this.TomarSeleccionTipoRT);
             // 
@@ -124,22 +124,23 @@ namespace PPAI_Implementacion.Interfaz
             // 
             this.gbxRecurso.Controls.Add(this.btnRecurso);
             this.gbxRecurso.Controls.Add(this.dgvRecursos);
-            this.gbxRecurso.Location = new System.Drawing.Point(16, 106);
+            this.gbxRecurso.Location = new System.Drawing.Point(1, 153);
             this.gbxRecurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxRecurso.Name = "gbxRecurso";
             this.gbxRecurso.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxRecurso.Size = new System.Drawing.Size(743, 262);
+            this.gbxRecurso.Size = new System.Drawing.Size(829, 432);
             this.gbxRecurso.TabIndex = 3;
             this.gbxRecurso.TabStop = false;
             this.gbxRecurso.Text = "Seleccionar Recurso";
+            this.gbxRecurso.Enter += new System.EventHandler(this.gbxRecurso_Enter);
             // 
             // btnRecurso
             // 
             this.btnRecurso.Enabled = false;
-            this.btnRecurso.Location = new System.Drawing.Point(11, 217);
+            this.btnRecurso.Location = new System.Drawing.Point(8, 308);
             this.btnRecurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRecurso.Name = "btnRecurso";
-            this.btnRecurso.Size = new System.Drawing.Size(159, 28);
+            this.btnRecurso.Size = new System.Drawing.Size(175, 34);
             this.btnRecurso.TabIndex = 1;
             this.btnRecurso.Text = "Seleccionar Recurso";
             this.btnRecurso.UseVisualStyleBackColor = true;
@@ -157,13 +158,13 @@ namespace PPAI_Implementacion.Interfaz
             this.Marca,
             this.Estado});
             this.dgvRecursos.Enabled = false;
-            this.dgvRecursos.Location = new System.Drawing.Point(11, 23);
+            this.dgvRecursos.Location = new System.Drawing.Point(0, 23);
             this.dgvRecursos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvRecursos.MultiSelect = false;
             this.dgvRecursos.Name = "dgvRecursos";
             this.dgvRecursos.ReadOnly = true;
             this.dgvRecursos.RowHeadersWidth = 20;
-            this.dgvRecursos.Size = new System.Drawing.Size(724, 185);
+            this.dgvRecursos.Size = new System.Drawing.Size(824, 277);
             this.dgvRecursos.TabIndex = 0;
             // 
             // NroInventario
@@ -211,11 +212,11 @@ namespace PPAI_Implementacion.Interfaz
             this.gbxTurno.Controls.Add(this.btnTurno);
             this.gbxTurno.Controls.Add(this.dgvHorasTurnos);
             this.gbxTurno.Controls.Add(this.cldDiasTurnos);
-            this.gbxTurno.Location = new System.Drawing.Point(16, 377);
+            this.gbxTurno.Location = new System.Drawing.Point(829, 3);
             this.gbxTurno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxTurno.Name = "gbxTurno";
             this.gbxTurno.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxTurno.Size = new System.Drawing.Size(743, 241);
+            this.gbxTurno.Size = new System.Drawing.Size(819, 320);
             this.gbxTurno.TabIndex = 4;
             this.gbxTurno.TabStop = false;
             this.gbxTurno.Text = "Seleccionar Turno";
@@ -223,7 +224,7 @@ namespace PPAI_Implementacion.Interfaz
             // btnTurno
             // 
             this.btnTurno.Enabled = false;
-            this.btnTurno.Location = new System.Drawing.Point(589, 197);
+            this.btnTurno.Location = new System.Drawing.Point(666, 218);
             this.btnTurno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTurno.Name = "btnTurno";
             this.btnTurno.Size = new System.Drawing.Size(145, 30);
@@ -247,7 +248,7 @@ namespace PPAI_Implementacion.Interfaz
             this.dgvHorasTurnos.Name = "dgvHorasTurnos";
             this.dgvHorasTurnos.ReadOnly = true;
             this.dgvHorasTurnos.RowHeadersWidth = 20;
-            this.dgvHorasTurnos.Size = new System.Drawing.Size(364, 162);
+            this.dgvHorasTurnos.Size = new System.Drawing.Size(440, 183);
             this.dgvHorasTurnos.TabIndex = 1;
             // 
             // Horario
@@ -298,11 +299,11 @@ namespace PPAI_Implementacion.Interfaz
             this.gbxConfirmacion.Controls.Add(this.lblDatosTipoRecurso);
             this.gbxConfirmacion.Controls.Add(this.txtNroInventario);
             this.gbxConfirmacion.Controls.Add(this.lblDatosNroInv);
-            this.gbxConfirmacion.Location = new System.Drawing.Point(767, 15);
+            this.gbxConfirmacion.Location = new System.Drawing.Point(829, 320);
             this.gbxConfirmacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gbxConfirmacion.Name = "gbxConfirmacion";
             this.gbxConfirmacion.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxConfirmacion.Size = new System.Drawing.Size(400, 602);
+            this.gbxConfirmacion.Size = new System.Drawing.Size(846, 329);
             this.gbxConfirmacion.TabIndex = 5;
             this.gbxConfirmacion.TabStop = false;
             this.gbxConfirmacion.Text = "Confirmacion Turno";
@@ -310,7 +311,7 @@ namespace PPAI_Implementacion.Interfaz
             // 
             // btnCancelarReserva
             // 
-            this.btnCancelarReserva.Location = new System.Drawing.Point(25, 389);
+            this.btnCancelarReserva.Location = new System.Drawing.Point(14, 282);
             this.btnCancelarReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelarReserva.Name = "btnCancelarReserva";
             this.btnCancelarReserva.Size = new System.Drawing.Size(140, 28);
@@ -322,7 +323,7 @@ namespace PPAI_Implementacion.Interfaz
             // btnConfirmarReserva
             // 
             this.btnConfirmarReserva.Enabled = false;
-            this.btnConfirmarReserva.Location = new System.Drawing.Point(25, 353);
+            this.btnConfirmarReserva.Location = new System.Drawing.Point(14, 246);
             this.btnConfirmarReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConfirmarReserva.Name = "btnConfirmarReserva";
             this.btnConfirmarReserva.Size = new System.Drawing.Size(140, 28);
@@ -344,7 +345,7 @@ namespace PPAI_Implementacion.Interfaz
             // lblDatosTurno
             // 
             this.lblDatosTurno.AutoSize = true;
-            this.lblDatosTurno.Location = new System.Drawing.Point(11, 215);
+            this.lblDatosTurno.Location = new System.Drawing.Point(349, 27);
             this.lblDatosTurno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDatosTurno.Name = "lblDatosTurno";
             this.lblDatosTurno.Size = new System.Drawing.Size(91, 17);
@@ -354,7 +355,7 @@ namespace PPAI_Implementacion.Interfaz
             // txtHoraTurno
             // 
             this.txtHoraTurno.Enabled = false;
-            this.txtHoraTurno.Location = new System.Drawing.Point(149, 273);
+            this.txtHoraTurno.Location = new System.Drawing.Point(487, 85);
             this.txtHoraTurno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtHoraTurno.Name = "txtHoraTurno";
             this.txtHoraTurno.Size = new System.Drawing.Size(132, 22);
@@ -363,7 +364,7 @@ namespace PPAI_Implementacion.Interfaz
             // lblDatosHoraTurno
             // 
             this.lblDatosHoraTurno.AutoSize = true;
-            this.lblDatosHoraTurno.Location = new System.Drawing.Point(9, 276);
+            this.lblDatosHoraTurno.Location = new System.Drawing.Point(347, 88);
             this.lblDatosHoraTurno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDatosHoraTurno.Name = "lblDatosHoraTurno";
             this.lblDatosHoraTurno.Size = new System.Drawing.Size(105, 17);
@@ -373,7 +374,7 @@ namespace PPAI_Implementacion.Interfaz
             // txtFechaTurno
             // 
             this.txtFechaTurno.Enabled = false;
-            this.txtFechaTurno.Location = new System.Drawing.Point(149, 241);
+            this.txtFechaTurno.Location = new System.Drawing.Point(487, 53);
             this.txtFechaTurno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFechaTurno.Name = "txtFechaTurno";
             this.txtFechaTurno.Size = new System.Drawing.Size(132, 22);
@@ -382,7 +383,7 @@ namespace PPAI_Implementacion.Interfaz
             // lblDatosFechaTurno
             // 
             this.lblDatosFechaTurno.AutoSize = true;
-            this.lblDatosFechaTurno.Location = new System.Drawing.Point(9, 244);
+            this.lblDatosFechaTurno.Location = new System.Drawing.Point(347, 56);
             this.lblDatosFechaTurno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDatosFechaTurno.Name = "lblDatosFechaTurno";
             this.lblDatosFechaTurno.Size = new System.Drawing.Size(118, 17);
@@ -489,7 +490,7 @@ namespace PPAI_Implementacion.Interfaz
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1183, 631);
+            this.ClientSize = new System.Drawing.Size(1661, 662);
             this.Controls.Add(this.gbxConfirmacion);
             this.Controls.Add(this.gbxTurno);
             this.Controls.Add(this.gbxRecurso);

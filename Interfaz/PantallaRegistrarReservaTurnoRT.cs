@@ -219,5 +219,10 @@ namespace PPAI_Implementacion.Interfaz
         {
 
         }
+
+        private void gbxRecurso_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
