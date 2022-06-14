@@ -143,7 +143,7 @@ namespace PPAI_Implementacion.Interfaz
         {
 
             MessageBox.Show("Se ha enviado un mail con la confirmacion", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            MessageBox.Show("Se ha enviado un mail con la confirmacion", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MensajeCUFin();
 
 
 
