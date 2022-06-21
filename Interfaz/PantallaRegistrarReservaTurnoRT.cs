@@ -79,6 +79,8 @@ namespace PPAI_Implementacion.Interfaz
                         colorEstado = Color.DarkGray;
                         break;
 
+
+
                     default:
                         colorEstado = Color.White;
                         break;
@@ -92,8 +94,15 @@ namespace PPAI_Implementacion.Interfaz
             if(dgvRecursos.CurrentRow == null)
             {
                 MensajeNadaSeleccionado("Seleccione un Recurso Tecnologico.");
+        
                 return;
             }
+          /*  if( dgvRecursos.SelectedCells[3].Value.ToString() == "Inicio Mantenimiento Preventivo")
+            {
+
+                btnRecurso.Enabled = false;
+            }
+            */
             gestorTurnos.TomarSeleccionRT(dgvRecursos.CurrentRow.Index);
         }
 
@@ -135,22 +144,27 @@ namespace PPAI_Implementacion.Interfaz
 
             txtFechaTurno.Text = datosTurno[0];
             txtHoraTurno.Text = datosTurno[1];
-
+            cbxEmail.Enabled = true;
+            cbxEmail.Checked = true;
+            cbxWhatsapp.Enabled = true;
+           
             btnConfirmarReserva.Enabled = true;
         }
 
         private void TomarConfirmacionReservaRT(object sender, EventArgs e)
         {
-
-
-            MensajeCUFin();
-            MessageBox.Show("Se ha enviado un mail con la confirmacion", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            Environment.Exit(0);
-
-
-
-
+            //Checkea que al menos un metodo de notificacion este seleccionado
+            if (!cbxEmail.Checked && !cbxWhatsapp.Checked)
+            {
+                MensajeNadaSeleccionado("Seleccione al menos un método de notificacion.");
+                return;
+            }
+            gestorTurnos.TomarConfirmacionReservaRT(cbxEmail.Checked, cbxWhatsapp.Checked);
         }
+
+
+
+    
 
         private void CancelarReservaTurno(object sender, EventArgs e)
         {
@@ -224,6 +238,16 @@ namespace PPAI_Implementacion.Interfaz
         }
 
         private void gbxRecurso_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvRecursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

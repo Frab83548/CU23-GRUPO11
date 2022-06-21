@@ -152,12 +152,12 @@ namespace PPAI_Implementacion.Gestor
             pantallaReserva.SolicitarConfirmacionReservaRT(rtSeleccionado.MostrarDatosRT(), rtSeleccionado.GetTipo().GetNombre(), turnoSeleccionado.MostrarTurno());
         }
 
-        public void TomarConfirmacionReservaRT(bool mail)
+        public void TomarConfirmacionReservaRT(bool mail, bool wsp)
         {
-            GenerarReservaRTSeleccionado(mail);
+            GenerarReservaRTSeleccionado(mail, wsp);
         }
 
-        public void GenerarReservaRTSeleccionado(bool boolMail)
+        public void GenerarReservaRTSeleccionado(bool boolMail, bool wsp)
         {
             //Poner turno en reservado
             Estado estadoReservado = ObtenerEstadoReservado();
@@ -168,6 +168,10 @@ namespace PPAI_Implementacion.Gestor
             if(boolMail)
                 GenerarMail(mail);
 
+            if (wsp)
+                GenerarWhatsapp(cientificoLogueado.ObtenerTelefono());
+
+       
             FinCU();
         }
 
@@ -175,8 +179,11 @@ namespace PPAI_Implementacion.Gestor
         {
             new InterfazMailReserva().EnviarNotificacionMail(email);
         }
+        public void GenerarWhatsapp(string telefono)
+        {
+            new InterfazWhatsappReserva().EnviarNotificacionWhatsapp(telefono);
+        }
 
-     
 
         public Estado ObtenerEstadoReservado()
         {

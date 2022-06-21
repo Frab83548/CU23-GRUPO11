@@ -32,11 +32,19 @@ namespace PPAI_Implementacion.Interfaz
             this.cbxTipoRecurso = new System.Windows.Forms.ComboBox();
             this.lblTipoRecurso = new System.Windows.Forms.Label();
             this.gbxTipoRecurso = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnTipoRecurso = new System.Windows.Forms.Button();
             this.gbxRecurso = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnRecurso = new System.Windows.Forms.Button();
             this.dgvRecursos = new System.Windows.Forms.DataGridView();
+            this.NroInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CentroInvestigacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbxTurno = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnTurno = new System.Windows.Forms.Button();
             this.dgvHorasTurnos = new System.Windows.Forms.DataGridView();
             this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,20 +69,16 @@ namespace PPAI_Implementacion.Interfaz
             this.lblDatosTipoRecurso = new System.Windows.Forms.Label();
             this.txtNroInventario = new System.Windows.Forms.TextBox();
             this.lblDatosNroInv = new System.Windows.Forms.Label();
-            this.NroInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CentroInvestigacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxEmail = new System.Windows.Forms.CheckBox();
+            this.cbxWhatsapp = new System.Windows.Forms.CheckBox();
             this.gbxTipoRecurso.SuspendLayout();
             this.gbxRecurso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecursos)).BeginInit();
             this.gbxTurno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorasTurnos)).BeginInit();
             this.gbxConfirmacion.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbxTipoRecurso
@@ -82,7 +86,7 @@ namespace PPAI_Implementacion.Interfaz
             this.cbxTipoRecurso.Enabled = false;
             this.cbxTipoRecurso.FormattingEnabled = true;
             this.cbxTipoRecurso.Location = new System.Drawing.Point(210, 63);
-            this.cbxTipoRecurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxTipoRecurso.Margin = new System.Windows.Forms.Padding(4);
             this.cbxTipoRecurso.Name = "cbxTipoRecurso";
             this.cbxTipoRecurso.Size = new System.Drawing.Size(160, 28);
             this.cbxTipoRecurso.TabIndex = 0;
@@ -105,18 +109,28 @@ namespace PPAI_Implementacion.Interfaz
             this.gbxTipoRecurso.Controls.Add(this.cbxTipoRecurso);
             this.gbxTipoRecurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxTipoRecurso.Location = new System.Drawing.Point(1, 3);
-            this.gbxTipoRecurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxTipoRecurso.Margin = new System.Windows.Forms.Padding(4);
             this.gbxTipoRecurso.Name = "gbxTipoRecurso";
-            this.gbxTipoRecurso.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxTipoRecurso.Padding = new System.Windows.Forms.Padding(4);
             this.gbxTipoRecurso.Size = new System.Drawing.Size(712, 187);
             this.gbxTipoRecurso.TabIndex = 2;
             this.gbxTipoRecurso.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(29, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(252, 23);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Selecciona un tipo de recurso";
             // 
             // btnTipoRecurso
             // 
             this.btnTipoRecurso.Enabled = false;
             this.btnTipoRecurso.Location = new System.Drawing.Point(403, 62);
-            this.btnTipoRecurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTipoRecurso.Margin = new System.Windows.Forms.Padding(4);
             this.btnTipoRecurso.Name = "btnTipoRecurso";
             this.btnTipoRecurso.Size = new System.Drawing.Size(165, 28);
             this.btnTipoRecurso.TabIndex = 2;
@@ -130,19 +144,28 @@ namespace PPAI_Implementacion.Interfaz
             this.gbxRecurso.Controls.Add(this.btnRecurso);
             this.gbxRecurso.Controls.Add(this.dgvRecursos);
             this.gbxRecurso.Location = new System.Drawing.Point(6, 198);
-            this.gbxRecurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxRecurso.Margin = new System.Windows.Forms.Padding(4);
             this.gbxRecurso.Name = "gbxRecurso";
-            this.gbxRecurso.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxRecurso.Padding = new System.Windows.Forms.Padding(4);
             this.gbxRecurso.Size = new System.Drawing.Size(829, 432);
             this.gbxRecurso.TabIndex = 3;
             this.gbxRecurso.TabStop = false;
             this.gbxRecurso.Enter += new System.EventHandler(this.gbxRecurso_Enter);
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(174, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Selecionar un recurso";
+            // 
             // btnRecurso
             // 
             this.btnRecurso.Enabled = false;
             this.btnRecurso.Location = new System.Drawing.Point(7, 362);
-            this.btnRecurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRecurso.Margin = new System.Windows.Forms.Padding(4);
             this.btnRecurso.Name = "btnRecurso";
             this.btnRecurso.Size = new System.Drawing.Size(175, 34);
             this.btnRecurso.TabIndex = 1;
@@ -163,291 +186,14 @@ namespace PPAI_Implementacion.Interfaz
             this.Estado});
             this.dgvRecursos.Enabled = false;
             this.dgvRecursos.Location = new System.Drawing.Point(0, 68);
-            this.dgvRecursos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvRecursos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvRecursos.MultiSelect = false;
             this.dgvRecursos.Name = "dgvRecursos";
             this.dgvRecursos.ReadOnly = true;
             this.dgvRecursos.RowHeadersWidth = 20;
             this.dgvRecursos.Size = new System.Drawing.Size(824, 277);
             this.dgvRecursos.TabIndex = 0;
-            // 
-            // gbxTurno
-            // 
-            this.gbxTurno.Controls.Add(this.label3);
-            this.gbxTurno.Controls.Add(this.btnTurno);
-            this.gbxTurno.Controls.Add(this.dgvHorasTurnos);
-            this.gbxTurno.Controls.Add(this.cldDiasTurnos);
-            this.gbxTurno.Location = new System.Drawing.Point(838, 3);
-            this.gbxTurno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxTurno.Name = "gbxTurno";
-            this.gbxTurno.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxTurno.Size = new System.Drawing.Size(872, 291);
-            this.gbxTurno.TabIndex = 4;
-            this.gbxTurno.TabStop = false;
-            // 
-            // btnTurno
-            // 
-            this.btnTurno.Enabled = false;
-            this.btnTurno.Location = new System.Drawing.Point(666, 253);
-            this.btnTurno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnTurno.Name = "btnTurno";
-            this.btnTurno.Size = new System.Drawing.Size(145, 30);
-            this.btnTurno.TabIndex = 2;
-            this.btnTurno.Text = "Seleccionar Turno";
-            this.btnTurno.UseVisualStyleBackColor = true;
-            this.btnTurno.Click += new System.EventHandler(this.TomarSeleccionTurno);
-            // 
-            // dgvHorasTurnos
-            // 
-            this.dgvHorasTurnos.AllowUserToAddRows = false;
-            this.dgvHorasTurnos.AllowUserToDeleteRows = false;
-            this.dgvHorasTurnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHorasTurnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Horario,
-            this.EstadoTurno});
-            this.dgvHorasTurnos.Enabled = false;
-            this.dgvHorasTurnos.Location = new System.Drawing.Point(371, 63);
-            this.dgvHorasTurnos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dgvHorasTurnos.MultiSelect = false;
-            this.dgvHorasTurnos.Name = "dgvHorasTurnos";
-            this.dgvHorasTurnos.ReadOnly = true;
-            this.dgvHorasTurnos.RowHeadersWidth = 20;
-            this.dgvHorasTurnos.Size = new System.Drawing.Size(440, 183);
-            this.dgvHorasTurnos.TabIndex = 1;
-            // 
-            // Horario
-            // 
-            this.Horario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Horario.HeaderText = "Horario";
-            this.Horario.MinimumWidth = 6;
-            this.Horario.Name = "Horario";
-            this.Horario.ReadOnly = true;
-            this.Horario.Width = 84;
-            // 
-            // EstadoTurno
-            // 
-            this.EstadoTurno.HeaderText = "Estado";
-            this.EstadoTurno.MinimumWidth = 6;
-            this.EstadoTurno.Name = "EstadoTurno";
-            this.EstadoTurno.ReadOnly = true;
-            this.EstadoTurno.Width = 125;
-            // 
-            // cldDiasTurnos
-            // 
-            this.cldDiasTurnos.BackColor = System.Drawing.SystemColors.GrayText;
-            this.cldDiasTurnos.Enabled = false;
-            this.cldDiasTurnos.Location = new System.Drawing.Point(16, 41);
-            this.cldDiasTurnos.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
-            this.cldDiasTurnos.MaxSelectionCount = 1;
-            this.cldDiasTurnos.Name = "cldDiasTurnos";
-            this.cldDiasTurnos.TabIndex = 0;
-            this.cldDiasTurnos.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.MostrarTurnosDia);
-            // 
-            // gbxConfirmacion
-            // 
-            this.gbxConfirmacion.Controls.Add(this.btnCancelarReserva);
-            this.gbxConfirmacion.Controls.Add(this.btnConfirmarReserva);
-            this.gbxConfirmacion.Controls.Add(this.lblDatosRecurso);
-            this.gbxConfirmacion.Controls.Add(this.lblDatosTurno);
-            this.gbxConfirmacion.Controls.Add(this.txtHoraTurno);
-            this.gbxConfirmacion.Controls.Add(this.lblDatosHoraTurno);
-            this.gbxConfirmacion.Controls.Add(this.txtFechaTurno);
-            this.gbxConfirmacion.Controls.Add(this.lblDatosFechaTurno);
-            this.gbxConfirmacion.Controls.Add(this.txtModelo);
-            this.gbxConfirmacion.Controls.Add(this.lblDatosModelo);
-            this.gbxConfirmacion.Controls.Add(this.txtMarca);
-            this.gbxConfirmacion.Controls.Add(this.lblDatosMarca);
-            this.gbxConfirmacion.Controls.Add(this.txtCentroInvestigacion);
-            this.gbxConfirmacion.Controls.Add(this.lblDatosCentroInv);
-            this.gbxConfirmacion.Controls.Add(this.txtTipoRecurso);
-            this.gbxConfirmacion.Controls.Add(this.lblDatosTipoRecurso);
-            this.gbxConfirmacion.Controls.Add(this.txtNroInventario);
-            this.gbxConfirmacion.Controls.Add(this.lblDatosNroInv);
-            this.gbxConfirmacion.Location = new System.Drawing.Point(845, 302);
-            this.gbxConfirmacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxConfirmacion.Name = "gbxConfirmacion";
-            this.gbxConfirmacion.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxConfirmacion.Size = new System.Drawing.Size(865, 355);
-            this.gbxConfirmacion.TabIndex = 5;
-            this.gbxConfirmacion.TabStop = false;
-            this.gbxConfirmacion.Text = "Confirmacion Turno";
-            this.gbxConfirmacion.Enter += new System.EventHandler(this.gbxConfirmacion_Enter);
-            // 
-            // btnCancelarReserva
-            // 
-            this.btnCancelarReserva.Location = new System.Drawing.Point(14, 282);
-            this.btnCancelarReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCancelarReserva.Name = "btnCancelarReserva";
-            this.btnCancelarReserva.Size = new System.Drawing.Size(140, 28);
-            this.btnCancelarReserva.TabIndex = 20;
-            this.btnCancelarReserva.Text = "Cancelar Reserva";
-            this.btnCancelarReserva.UseVisualStyleBackColor = true;
-            this.btnCancelarReserva.Click += new System.EventHandler(this.CancelarReservaTurno);
-            // 
-            // btnConfirmarReserva
-            // 
-            this.btnConfirmarReserva.Enabled = false;
-            this.btnConfirmarReserva.Location = new System.Drawing.Point(14, 246);
-            this.btnConfirmarReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnConfirmarReserva.Name = "btnConfirmarReserva";
-            this.btnConfirmarReserva.Size = new System.Drawing.Size(140, 28);
-            this.btnConfirmarReserva.TabIndex = 19;
-            this.btnConfirmarReserva.Text = "Confirmar Reserva";
-            this.btnConfirmarReserva.UseVisualStyleBackColor = true;
-            this.btnConfirmarReserva.Click += new System.EventHandler(this.TomarConfirmacionReservaRT);
-            // 
-            // lblDatosRecurso
-            // 
-            this.lblDatosRecurso.AutoSize = true;
-            this.lblDatosRecurso.Location = new System.Drawing.Point(11, 27);
-            this.lblDatosRecurso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDatosRecurso.Name = "lblDatosRecurso";
-            this.lblDatosRecurso.Size = new System.Drawing.Size(106, 17);
-            this.lblDatosRecurso.TabIndex = 18;
-            this.lblDatosRecurso.Text = "Datos Recurso:";
-            // 
-            // lblDatosTurno
-            // 
-            this.lblDatosTurno.AutoSize = true;
-            this.lblDatosTurno.Location = new System.Drawing.Point(349, 27);
-            this.lblDatosTurno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDatosTurno.Name = "lblDatosTurno";
-            this.lblDatosTurno.Size = new System.Drawing.Size(91, 17);
-            this.lblDatosTurno.TabIndex = 17;
-            this.lblDatosTurno.Text = "Datos Turno:";
-            // 
-            // txtHoraTurno
-            // 
-            this.txtHoraTurno.Enabled = false;
-            this.txtHoraTurno.Location = new System.Drawing.Point(487, 85);
-            this.txtHoraTurno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtHoraTurno.Name = "txtHoraTurno";
-            this.txtHoraTurno.Size = new System.Drawing.Size(132, 22);
-            this.txtHoraTurno.TabIndex = 16;
-            // 
-            // lblDatosHoraTurno
-            // 
-            this.lblDatosHoraTurno.AutoSize = true;
-            this.lblDatosHoraTurno.Location = new System.Drawing.Point(347, 88);
-            this.lblDatosHoraTurno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDatosHoraTurno.Name = "lblDatosHoraTurno";
-            this.lblDatosHoraTurno.Size = new System.Drawing.Size(105, 17);
-            this.lblDatosHoraTurno.TabIndex = 15;
-            this.lblDatosHoraTurno.Text = "Fecha Hora Fin";
-            // 
-            // txtFechaTurno
-            // 
-            this.txtFechaTurno.Enabled = false;
-            this.txtFechaTurno.Location = new System.Drawing.Point(487, 53);
-            this.txtFechaTurno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtFechaTurno.Name = "txtFechaTurno";
-            this.txtFechaTurno.Size = new System.Drawing.Size(132, 22);
-            this.txtFechaTurno.TabIndex = 14;
-            // 
-            // lblDatosFechaTurno
-            // 
-            this.lblDatosFechaTurno.AutoSize = true;
-            this.lblDatosFechaTurno.Location = new System.Drawing.Point(347, 56);
-            this.lblDatosFechaTurno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDatosFechaTurno.Name = "lblDatosFechaTurno";
-            this.lblDatosFechaTurno.Size = new System.Drawing.Size(118, 17);
-            this.lblDatosFechaTurno.TabIndex = 13;
-            this.lblDatosFechaTurno.Text = "Fecha Hora Inicio";
-            // 
-            // txtModelo
-            // 
-            this.txtModelo.Enabled = false;
-            this.txtModelo.Location = new System.Drawing.Point(149, 173);
-            this.txtModelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(132, 22);
-            this.txtModelo.TabIndex = 12;
-            // 
-            // lblDatosModelo
-            // 
-            this.lblDatosModelo.AutoSize = true;
-            this.lblDatosModelo.Location = new System.Drawing.Point(9, 177);
-            this.lblDatosModelo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDatosModelo.Name = "lblDatosModelo";
-            this.lblDatosModelo.Size = new System.Drawing.Size(54, 17);
-            this.lblDatosModelo.TabIndex = 11;
-            this.lblDatosModelo.Text = "Modelo";
-            // 
-            // txtMarca
-            // 
-            this.txtMarca.Enabled = false;
-            this.txtMarca.Location = new System.Drawing.Point(149, 141);
-            this.txtMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(132, 22);
-            this.txtMarca.TabIndex = 10;
-            // 
-            // lblDatosMarca
-            // 
-            this.lblDatosMarca.AutoSize = true;
-            this.lblDatosMarca.Location = new System.Drawing.Point(9, 145);
-            this.lblDatosMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDatosMarca.Name = "lblDatosMarca";
-            this.lblDatosMarca.Size = new System.Drawing.Size(47, 17);
-            this.lblDatosMarca.TabIndex = 9;
-            this.lblDatosMarca.Text = "Marca";
-            // 
-            // txtCentroInvestigacion
-            // 
-            this.txtCentroInvestigacion.Enabled = false;
-            this.txtCentroInvestigacion.Location = new System.Drawing.Point(149, 109);
-            this.txtCentroInvestigacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtCentroInvestigacion.Name = "txtCentroInvestigacion";
-            this.txtCentroInvestigacion.Size = new System.Drawing.Size(132, 22);
-            this.txtCentroInvestigacion.TabIndex = 8;
-            // 
-            // lblDatosCentroInv
-            // 
-            this.lblDatosCentroInv.AutoSize = true;
-            this.lblDatosCentroInv.Location = new System.Drawing.Point(9, 113);
-            this.lblDatosCentroInv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDatosCentroInv.Name = "lblDatosCentroInv";
-            this.lblDatosCentroInv.Size = new System.Drawing.Size(136, 17);
-            this.lblDatosCentroInv.TabIndex = 7;
-            this.lblDatosCentroInv.Text = "Centro Investigacion";
-            // 
-            // txtTipoRecurso
-            // 
-            this.txtTipoRecurso.Enabled = false;
-            this.txtTipoRecurso.Location = new System.Drawing.Point(149, 77);
-            this.txtTipoRecurso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTipoRecurso.Name = "txtTipoRecurso";
-            this.txtTipoRecurso.Size = new System.Drawing.Size(132, 22);
-            this.txtTipoRecurso.TabIndex = 6;
-            // 
-            // lblDatosTipoRecurso
-            // 
-            this.lblDatosTipoRecurso.AutoSize = true;
-            this.lblDatosTipoRecurso.Location = new System.Drawing.Point(9, 81);
-            this.lblDatosTipoRecurso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDatosTipoRecurso.Name = "lblDatosTipoRecurso";
-            this.lblDatosTipoRecurso.Size = new System.Drawing.Size(93, 17);
-            this.lblDatosTipoRecurso.TabIndex = 5;
-            this.lblDatosTipoRecurso.Text = "Tipo Recurso";
-            // 
-            // txtNroInventario
-            // 
-            this.txtNroInventario.Enabled = false;
-            this.txtNroInventario.Location = new System.Drawing.Point(149, 45);
-            this.txtNroInventario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtNroInventario.Name = "txtNroInventario";
-            this.txtNroInventario.Size = new System.Drawing.Size(132, 22);
-            this.txtNroInventario.TabIndex = 4;
-            // 
-            // lblDatosNroInv
-            // 
-            this.lblDatosNroInv.AutoSize = true;
-            this.lblDatosNroInv.Location = new System.Drawing.Point(9, 49);
-            this.lblDatosNroInv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDatosNroInv.Name = "lblDatosNroInv";
-            this.lblDatosNroInv.Size = new System.Drawing.Size(97, 17);
-            this.lblDatosNroInv.TabIndex = 3;
-            this.lblDatosNroInv.Text = "Nro Inventario";
+            this.dgvRecursos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecursos_CellContentClick);
             // 
             // NroInventario
             // 
@@ -489,24 +235,19 @@ namespace PPAI_Implementacion.Interfaz
             this.Estado.ReadOnly = true;
             this.Estado.Width = 125;
             // 
-            // label1
+            // gbxTurno
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 23);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Selecciona un tipo de recurso";
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(174, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Selecionar un recurso";
+            this.gbxTurno.Controls.Add(this.label3);
+            this.gbxTurno.Controls.Add(this.btnTurno);
+            this.gbxTurno.Controls.Add(this.dgvHorasTurnos);
+            this.gbxTurno.Controls.Add(this.cldDiasTurnos);
+            this.gbxTurno.Location = new System.Drawing.Point(838, 3);
+            this.gbxTurno.Margin = new System.Windows.Forms.Padding(4);
+            this.gbxTurno.Name = "gbxTurno";
+            this.gbxTurno.Padding = new System.Windows.Forms.Padding(4);
+            this.gbxTurno.Size = new System.Drawing.Size(872, 291);
+            this.gbxTurno.TabIndex = 4;
+            this.gbxTurno.TabStop = false;
             // 
             // label3
             // 
@@ -518,6 +259,303 @@ namespace PPAI_Implementacion.Interfaz
             this.label3.TabIndex = 3;
             this.label3.Text = "Seleccionar un Turno";
             // 
+            // btnTurno
+            // 
+            this.btnTurno.Enabled = false;
+            this.btnTurno.Location = new System.Drawing.Point(666, 253);
+            this.btnTurno.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTurno.Name = "btnTurno";
+            this.btnTurno.Size = new System.Drawing.Size(145, 30);
+            this.btnTurno.TabIndex = 2;
+            this.btnTurno.Text = "Seleccionar Turno";
+            this.btnTurno.UseVisualStyleBackColor = true;
+            this.btnTurno.Click += new System.EventHandler(this.TomarSeleccionTurno);
+            // 
+            // dgvHorasTurnos
+            // 
+            this.dgvHorasTurnos.AllowUserToAddRows = false;
+            this.dgvHorasTurnos.AllowUserToDeleteRows = false;
+            this.dgvHorasTurnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHorasTurnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Horario,
+            this.EstadoTurno});
+            this.dgvHorasTurnos.Enabled = false;
+            this.dgvHorasTurnos.Location = new System.Drawing.Point(371, 63);
+            this.dgvHorasTurnos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvHorasTurnos.MultiSelect = false;
+            this.dgvHorasTurnos.Name = "dgvHorasTurnos";
+            this.dgvHorasTurnos.ReadOnly = true;
+            this.dgvHorasTurnos.RowHeadersWidth = 20;
+            this.dgvHorasTurnos.Size = new System.Drawing.Size(440, 183);
+            this.dgvHorasTurnos.TabIndex = 1;
+            // 
+            // Horario
+            // 
+            this.Horario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Horario.HeaderText = "Horario";
+            this.Horario.MinimumWidth = 6;
+            this.Horario.Name = "Horario";
+            this.Horario.ReadOnly = true;
+            this.Horario.Width = 84;
+            // 
+            // EstadoTurno
+            // 
+            this.EstadoTurno.HeaderText = "Estado";
+            this.EstadoTurno.MinimumWidth = 6;
+            this.EstadoTurno.Name = "EstadoTurno";
+            this.EstadoTurno.ReadOnly = true;
+            this.EstadoTurno.Width = 125;
+            // 
+            // cldDiasTurnos
+            // 
+            this.cldDiasTurnos.BackColor = System.Drawing.SystemColors.GrayText;
+            this.cldDiasTurnos.Enabled = false;
+            this.cldDiasTurnos.Location = new System.Drawing.Point(16, 41);
+            this.cldDiasTurnos.Margin = new System.Windows.Forms.Padding(12, 11, 12, 11);
+            this.cldDiasTurnos.MaxSelectionCount = 1;
+            this.cldDiasTurnos.Name = "cldDiasTurnos";
+            this.cldDiasTurnos.TabIndex = 0;
+            this.cldDiasTurnos.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.MostrarTurnosDia);
+            // 
+            // gbxConfirmacion
+            // 
+            this.gbxConfirmacion.Controls.Add(this.groupBox1);
+            this.gbxConfirmacion.Controls.Add(this.btnCancelarReserva);
+            this.gbxConfirmacion.Controls.Add(this.btnConfirmarReserva);
+            this.gbxConfirmacion.Controls.Add(this.lblDatosRecurso);
+            this.gbxConfirmacion.Controls.Add(this.lblDatosTurno);
+            this.gbxConfirmacion.Controls.Add(this.txtHoraTurno);
+            this.gbxConfirmacion.Controls.Add(this.lblDatosHoraTurno);
+            this.gbxConfirmacion.Controls.Add(this.txtFechaTurno);
+            this.gbxConfirmacion.Controls.Add(this.lblDatosFechaTurno);
+            this.gbxConfirmacion.Controls.Add(this.txtModelo);
+            this.gbxConfirmacion.Controls.Add(this.lblDatosModelo);
+            this.gbxConfirmacion.Controls.Add(this.txtMarca);
+            this.gbxConfirmacion.Controls.Add(this.lblDatosMarca);
+            this.gbxConfirmacion.Controls.Add(this.txtCentroInvestigacion);
+            this.gbxConfirmacion.Controls.Add(this.lblDatosCentroInv);
+            this.gbxConfirmacion.Controls.Add(this.txtTipoRecurso);
+            this.gbxConfirmacion.Controls.Add(this.lblDatosTipoRecurso);
+            this.gbxConfirmacion.Controls.Add(this.txtNroInventario);
+            this.gbxConfirmacion.Controls.Add(this.lblDatosNroInv);
+            this.gbxConfirmacion.Location = new System.Drawing.Point(845, 302);
+            this.gbxConfirmacion.Margin = new System.Windows.Forms.Padding(4);
+            this.gbxConfirmacion.Name = "gbxConfirmacion";
+            this.gbxConfirmacion.Padding = new System.Windows.Forms.Padding(4);
+            this.gbxConfirmacion.Size = new System.Drawing.Size(865, 355);
+            this.gbxConfirmacion.TabIndex = 5;
+            this.gbxConfirmacion.TabStop = false;
+            this.gbxConfirmacion.Text = "Confirmacion Turno";
+            this.gbxConfirmacion.Enter += new System.EventHandler(this.gbxConfirmacion_Enter);
+            // 
+            // btnCancelarReserva
+            // 
+            this.btnCancelarReserva.Location = new System.Drawing.Point(487, 294);
+            this.btnCancelarReserva.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelarReserva.Name = "btnCancelarReserva";
+            this.btnCancelarReserva.Size = new System.Drawing.Size(140, 29);
+            this.btnCancelarReserva.TabIndex = 20;
+            this.btnCancelarReserva.Text = "Cancelar Reserva";
+            this.btnCancelarReserva.UseVisualStyleBackColor = true;
+            this.btnCancelarReserva.Click += new System.EventHandler(this.CancelarReservaTurno);
+            // 
+            // btnConfirmarReserva
+            // 
+            this.btnConfirmarReserva.Enabled = false;
+            this.btnConfirmarReserva.Location = new System.Drawing.Point(487, 258);
+            this.btnConfirmarReserva.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfirmarReserva.Name = "btnConfirmarReserva";
+            this.btnConfirmarReserva.Size = new System.Drawing.Size(140, 29);
+            this.btnConfirmarReserva.TabIndex = 19;
+            this.btnConfirmarReserva.Text = "Confirmar Reserva";
+            this.btnConfirmarReserva.UseVisualStyleBackColor = true;
+            this.btnConfirmarReserva.Click += new System.EventHandler(this.TomarConfirmacionReservaRT);
+            // 
+            // lblDatosRecurso
+            // 
+            this.lblDatosRecurso.AutoSize = true;
+            this.lblDatosRecurso.Location = new System.Drawing.Point(11, 27);
+            this.lblDatosRecurso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDatosRecurso.Name = "lblDatosRecurso";
+            this.lblDatosRecurso.Size = new System.Drawing.Size(106, 17);
+            this.lblDatosRecurso.TabIndex = 18;
+            this.lblDatosRecurso.Text = "Datos Recurso:";
+            // 
+            // lblDatosTurno
+            // 
+            this.lblDatosTurno.AutoSize = true;
+            this.lblDatosTurno.Location = new System.Drawing.Point(349, 27);
+            this.lblDatosTurno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDatosTurno.Name = "lblDatosTurno";
+            this.lblDatosTurno.Size = new System.Drawing.Size(91, 17);
+            this.lblDatosTurno.TabIndex = 17;
+            this.lblDatosTurno.Text = "Datos Turno:";
+            // 
+            // txtHoraTurno
+            // 
+            this.txtHoraTurno.Enabled = false;
+            this.txtHoraTurno.Location = new System.Drawing.Point(487, 85);
+            this.txtHoraTurno.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHoraTurno.Name = "txtHoraTurno";
+            this.txtHoraTurno.Size = new System.Drawing.Size(132, 22);
+            this.txtHoraTurno.TabIndex = 16;
+            // 
+            // lblDatosHoraTurno
+            // 
+            this.lblDatosHoraTurno.AutoSize = true;
+            this.lblDatosHoraTurno.Location = new System.Drawing.Point(347, 88);
+            this.lblDatosHoraTurno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDatosHoraTurno.Name = "lblDatosHoraTurno";
+            this.lblDatosHoraTurno.Size = new System.Drawing.Size(105, 17);
+            this.lblDatosHoraTurno.TabIndex = 15;
+            this.lblDatosHoraTurno.Text = "Fecha Hora Fin";
+            // 
+            // txtFechaTurno
+            // 
+            this.txtFechaTurno.Enabled = false;
+            this.txtFechaTurno.Location = new System.Drawing.Point(487, 53);
+            this.txtFechaTurno.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFechaTurno.Name = "txtFechaTurno";
+            this.txtFechaTurno.Size = new System.Drawing.Size(132, 22);
+            this.txtFechaTurno.TabIndex = 14;
+            // 
+            // lblDatosFechaTurno
+            // 
+            this.lblDatosFechaTurno.AutoSize = true;
+            this.lblDatosFechaTurno.Location = new System.Drawing.Point(347, 56);
+            this.lblDatosFechaTurno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDatosFechaTurno.Name = "lblDatosFechaTurno";
+            this.lblDatosFechaTurno.Size = new System.Drawing.Size(118, 17);
+            this.lblDatosFechaTurno.TabIndex = 13;
+            this.lblDatosFechaTurno.Text = "Fecha Hora Inicio";
+            // 
+            // txtModelo
+            // 
+            this.txtModelo.Enabled = false;
+            this.txtModelo.Location = new System.Drawing.Point(149, 173);
+            this.txtModelo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(132, 22);
+            this.txtModelo.TabIndex = 12;
+            // 
+            // lblDatosModelo
+            // 
+            this.lblDatosModelo.AutoSize = true;
+            this.lblDatosModelo.Location = new System.Drawing.Point(9, 177);
+            this.lblDatosModelo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDatosModelo.Name = "lblDatosModelo";
+            this.lblDatosModelo.Size = new System.Drawing.Size(54, 17);
+            this.lblDatosModelo.TabIndex = 11;
+            this.lblDatosModelo.Text = "Modelo";
+            // 
+            // txtMarca
+            // 
+            this.txtMarca.Enabled = false;
+            this.txtMarca.Location = new System.Drawing.Point(149, 141);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(132, 22);
+            this.txtMarca.TabIndex = 10;
+            // 
+            // lblDatosMarca
+            // 
+            this.lblDatosMarca.AutoSize = true;
+            this.lblDatosMarca.Location = new System.Drawing.Point(9, 145);
+            this.lblDatosMarca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDatosMarca.Name = "lblDatosMarca";
+            this.lblDatosMarca.Size = new System.Drawing.Size(47, 17);
+            this.lblDatosMarca.TabIndex = 9;
+            this.lblDatosMarca.Text = "Marca";
+            // 
+            // txtCentroInvestigacion
+            // 
+            this.txtCentroInvestigacion.Enabled = false;
+            this.txtCentroInvestigacion.Location = new System.Drawing.Point(149, 109);
+            this.txtCentroInvestigacion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCentroInvestigacion.Name = "txtCentroInvestigacion";
+            this.txtCentroInvestigacion.Size = new System.Drawing.Size(132, 22);
+            this.txtCentroInvestigacion.TabIndex = 8;
+            // 
+            // lblDatosCentroInv
+            // 
+            this.lblDatosCentroInv.AutoSize = true;
+            this.lblDatosCentroInv.Location = new System.Drawing.Point(9, 113);
+            this.lblDatosCentroInv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDatosCentroInv.Name = "lblDatosCentroInv";
+            this.lblDatosCentroInv.Size = new System.Drawing.Size(136, 17);
+            this.lblDatosCentroInv.TabIndex = 7;
+            this.lblDatosCentroInv.Text = "Centro Investigacion";
+            // 
+            // txtTipoRecurso
+            // 
+            this.txtTipoRecurso.Enabled = false;
+            this.txtTipoRecurso.Location = new System.Drawing.Point(149, 77);
+            this.txtTipoRecurso.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTipoRecurso.Name = "txtTipoRecurso";
+            this.txtTipoRecurso.Size = new System.Drawing.Size(132, 22);
+            this.txtTipoRecurso.TabIndex = 6;
+            // 
+            // lblDatosTipoRecurso
+            // 
+            this.lblDatosTipoRecurso.AutoSize = true;
+            this.lblDatosTipoRecurso.Location = new System.Drawing.Point(9, 81);
+            this.lblDatosTipoRecurso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDatosTipoRecurso.Name = "lblDatosTipoRecurso";
+            this.lblDatosTipoRecurso.Size = new System.Drawing.Size(93, 17);
+            this.lblDatosTipoRecurso.TabIndex = 5;
+            this.lblDatosTipoRecurso.Text = "Tipo Recurso";
+            // 
+            // txtNroInventario
+            // 
+            this.txtNroInventario.Enabled = false;
+            this.txtNroInventario.Location = new System.Drawing.Point(149, 45);
+            this.txtNroInventario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNroInventario.Name = "txtNroInventario";
+            this.txtNroInventario.Size = new System.Drawing.Size(132, 22);
+            this.txtNroInventario.TabIndex = 4;
+            // 
+            // lblDatosNroInv
+            // 
+            this.lblDatosNroInv.AutoSize = true;
+            this.lblDatosNroInv.Location = new System.Drawing.Point(9, 49);
+            this.lblDatosNroInv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDatosNroInv.Name = "lblDatosNroInv";
+            this.lblDatosNroInv.Size = new System.Drawing.Size(97, 17);
+            this.lblDatosNroInv.TabIndex = 3;
+            this.lblDatosNroInv.Text = "Nro Inventario";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cbxWhatsapp);
+            this.groupBox1.Controls.Add(this.cbxEmail);
+            this.groupBox1.Location = new System.Drawing.Point(12, 212);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(272, 96);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Notificacion";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // cbxEmail
+            // 
+            this.cbxEmail.AutoSize = true;
+            this.cbxEmail.Location = new System.Drawing.Point(16, 21);
+            this.cbxEmail.Name = "cbxEmail";
+            this.cbxEmail.Size = new System.Drawing.Size(64, 21);
+            this.cbxEmail.TabIndex = 0;
+            this.cbxEmail.Text = "Email";
+            this.cbxEmail.UseVisualStyleBackColor = true;
+            // 
+            // cbxWhatsapp
+            // 
+            this.cbxWhatsapp.AutoSize = true;
+            this.cbxWhatsapp.Location = new System.Drawing.Point(16, 48);
+            this.cbxWhatsapp.Name = "cbxWhatsapp";
+            this.cbxWhatsapp.Size = new System.Drawing.Size(95, 21);
+            this.cbxWhatsapp.TabIndex = 1;
+            this.cbxWhatsapp.Text = "WhatsApp";
+            this.cbxWhatsapp.UseVisualStyleBackColor = true;
+            // 
             // PantallaRegistrarReservaTurnoRT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -528,7 +566,7 @@ namespace PPAI_Implementacion.Interfaz
             this.Controls.Add(this.gbxTurno);
             this.Controls.Add(this.gbxRecurso);
             this.Controls.Add(this.gbxTipoRecurso);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PantallaRegistrarReservaTurnoRT";
             this.Text = "PantallaRegistrarReservaTurnoRT";
             this.Load += new System.EventHandler(this.PantallaRegistrarReservaTurnoRT_Load);
@@ -541,6 +579,8 @@ namespace PPAI_Implementacion.Interfaz
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorasTurnos)).EndInit();
             this.gbxConfirmacion.ResumeLayout(false);
             this.gbxConfirmacion.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -587,5 +627,8 @@ namespace PPAI_Implementacion.Interfaz
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox cbxWhatsapp;
+        private System.Windows.Forms.CheckBox cbxEmail;
     }
 }
