@@ -23,6 +23,7 @@ namespace PPAI_Implementacion.Interfaz
         {
             PantallaRegistrarReservaTurnoRT pantallaReservaTurno = new PantallaRegistrarReservaTurnoRT();
             pantallaReservaTurno.OpcionRegistrarReservarDeRT();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

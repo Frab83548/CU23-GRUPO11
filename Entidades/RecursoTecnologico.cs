@@ -34,9 +34,9 @@ namespace PPAI_Implementacion.Clases
                 return tipo.MostrarTipoRT() == tipoRecurso.MostrarTipoRT();
         }
 
-        public bool EsActivo()
+        public bool EsActivo()//el es reservable nunca pregunta si es baja tecnica o no
         {
-            return UltimoCambioEstado().EsReservable();
+            return UltimoCambioEstado().EsReservable();//es estadoa ctual, es estado actual reservable
         }
 
         public string[] MostrarDatosRT()
@@ -44,9 +44,9 @@ namespace PPAI_Implementacion.Clases
             string[] datos = new string[5];     //0: NroInventario, 1: CentroInvest, 2: Modelo, 3: Marca, 4: Estado
             datos[0] = GetNumeroRT().ToString();
             datos[4] = UltimoCambioEstado().MostrarEstado();
-            datos[1] = ObtenerCI().GetNombre();
+            datos[1] = ObtenerCI().GetNombre();//mostrarCI, /mostrarCentroDeInvestigacion
             string[] marcaModelo = MostrarMarcaYModelo();   //0: Modelo, 1: Marca
-            datos[2] = marcaModelo[0];
+            datos[2] = marcaModelo[0];//fila de arriba al reves
             datos[3] = marcaModelo[1];
 
             return datos;
@@ -77,7 +77,7 @@ namespace PPAI_Implementacion.Clases
             List<Tuple<Turno, string[]>> listaDatosTurnos = new List<Tuple<Turno, string[]>>();
             foreach (Turno turno in turnos)
             {
-                if (turno.EsPosteriorAFechaActual(fechaActual))
+                if (turno.EsPosteriorAFechaActual(fechaActual))//es posterior a fecha
                 {
                     Tuple<Turno, string[]> tuplaTurno = new Tuple<Turno, string[]>(turno, turno.MostrarTurno());
                     listaDatosTurnos.Add(tuplaTurno);

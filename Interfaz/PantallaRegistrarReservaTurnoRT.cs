@@ -25,10 +25,10 @@ namespace PPAI_Implementacion.Interfaz
             dgvHorasTurnos.AutoGenerateColumns = false;
         }
 
-        public void OpcionRegistrarReservarDeRT()
+        public void OpcionRegistrarReservarDeRT()//nueva reservaturnort??
         {
             HabilitarPantalla();
-            gestorTurnos.RegistrarReservaTurnoRT();
+            gestorTurnos.RegistrarReservaTurnoRT();//nuevaReservaTurnoRt??
         }
 
         public void HabilitarPantalla()
@@ -55,7 +55,7 @@ namespace PPAI_Implementacion.Interfaz
             btnRecurso.Enabled = true;
 
             dgvRecursos.DataSource = listaRT;
-            
+
             for (int i = 0; i < listaRT.Count; i++)
             {
                 dgvRecursos.Rows[i].Cells[0].Value = listaRT[i][0];
@@ -91,26 +91,29 @@ namespace PPAI_Implementacion.Interfaz
 
         private void TomarSeleccionRT(object sender, EventArgs e)
         {
-            if(dgvRecursos.CurrentRow == null)
+           
+            if (dgvRecursos.CurrentRow == null)
             {
                 MensajeNadaSeleccionado("Seleccione un Recurso Tecnologico.");
-        
+
                 return;
             }
-          /*  if( dgvRecursos.SelectedCells[3].Value.ToString() == "Inicio Mantenimiento Preventivo")
+            if (dgvRecursos.SelectedCells[4].Value.ToString() == "Inicio Mantenimiento Preventivo" || dgvRecursos.SelectedCells[4].Value.ToString() == "En Mantenimiento")
             {
-
-                btnRecurso.Enabled = false;
+                MessageBox.Show("No es reservable", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
             }
-            */
+
             gestorTurnos.TomarSeleccionRT(dgvRecursos.CurrentRow.Index);
         }
+
+        
 
         public void SolicitarSeleccionTurno(List<string[]> listaTurno)
         {
             //listaTurnosPorDia = listaTurno;
 
-            cldDiasTurnos.BackColor = Color.White;
+            cldDiasTurnos.BackColor = Color.Red;
             cldDiasTurnos.Enabled = true;
             dgvHorasTurnos.Enabled = true;
             btnTurno.Enabled = true;
@@ -127,7 +130,7 @@ namespace PPAI_Implementacion.Interfaz
             //Mensaje informacion que el turno elegido no esta disponible para reservar
             if ((string)dgvHorasTurnos.CurrentRow.Cells[1].Value != "Disponible")
             {
-                MensajeNadaSeleccionado("El turno seleccionado no esta disponible para ser reservado.");
+                MensajeNadaSeleccionado("El turno seleccionado ya esta reservado");
                 return;
             }
 
@@ -147,7 +150,7 @@ namespace PPAI_Implementacion.Interfaz
             cbxEmail.Enabled = true;
             cbxEmail.Checked = true;
             cbxWhatsapp.Enabled = true;
-           
+
             btnConfirmarReserva.Enabled = true;
         }
 
@@ -164,7 +167,7 @@ namespace PPAI_Implementacion.Interfaz
 
 
 
-    
+
 
         private void CancelarReservaTurno(object sender, EventArgs e)
         {
@@ -203,6 +206,15 @@ namespace PPAI_Implementacion.Interfaz
                         break;
                 }
                 dgvHorasTurnos.Rows[i].Cells[1].Style.BackColor = colorEstado;
+                bool bandera = false;
+                if (colorEstado == Color.Blue)
+                {
+                    bandera = true;
+                }
+                if (bandera == true)
+                {
+                    //cldDiasTurnos.BoldedDates = new DateTime(datosTurnos[i][2]);
+                }
             }
         }
 
@@ -214,42 +226,12 @@ namespace PPAI_Implementacion.Interfaz
         public void MensajeCUFin()
         {
             MessageBox.Show("Turno registrado con éxito.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void cldDiasTurnos_DateSelected(object sender, DateRangeEventArgs e)
+        {
            
-        }
-
-        private void gbxConfirmacion_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PantallaRegistrarReservaTurnoRT_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gbxNotificacion_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbxEmail_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gbxRecurso_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvRecursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

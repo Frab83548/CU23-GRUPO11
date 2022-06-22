@@ -31,7 +31,7 @@ namespace PPAI_Implementacion.Clases
             string[] datos = new string[3];
             datos[0] = fechaHoraInicio.ToString();
             datos[1] = fechaHoraFin.ToString();
-            datos[2] = UltimoCambioEstado().MostrarEstado();
+            datos[2] = UltimoCambioEstado().MostrarEstado();//es actual
 
             return datos;
         }

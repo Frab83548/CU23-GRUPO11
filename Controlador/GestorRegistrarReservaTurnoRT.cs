@@ -40,7 +40,7 @@ namespace PPAI_Implementacion.Gestor
         public void RegistrarReservaTurnoRT()
         {
             //Obtiene Lista con los tipos de recurso
-            List<string> listaTiposRT = BuscarTiposRT();
+            List<string> listaTiposRT = BuscarTiposRT();//buscarTiposDeRt??
             //Añade la opcion de TODOS al inicio
             listaTiposRT.Insert(0, "TODOS");
             pantallaReserva.SolicitarSeleccionTipoRT(listaTiposRT);
@@ -48,11 +48,11 @@ namespace PPAI_Implementacion.Gestor
 
         public List<string> BuscarTiposRT()
         {
-            List<TipoRecursoTecnologico> listaTipos = tipoRecursoTecnologicoDao.ObtenerTiposRT();
+            List<TipoRecursoTecnologico> listaTipos = tipoRecursoTecnologicoDao.ObtenerTiposRT();//GetNombreTR?
             List<string> listaNombres = new List<string>();
             foreach (TipoRecursoTecnologico tipo in listaTipos)
             {
-                listaNombres.Add(tipo.MostrarTipoRT());
+                listaNombres.Add(tipo.MostrarTipoRT());//esto falta en vista estatica
             }
 
             return listaNombres;
@@ -61,13 +61,13 @@ namespace PPAI_Implementacion.Gestor
         public void TomarSeleccionTipoRT(string seleccionado)
         {
             tipoRTSeleccionado = TipoRecursoTecnologicoDao.Instancia().ObtenerTipoRecurso(seleccionado);
-            BuscarRecusosTecnologicosCorrespondientes();
+            BuscarRecusosTecnologicosCorrespondientes();//BuscarRTCorresponientes
         }
 
-        public void BuscarRecusosTecnologicosCorrespondientes()
+        public void BuscarRecusosTecnologicosCorrespondientes()// esto no es consistente con nuestro modelo
         {
             //Obtener todos los recursos
-            List<RecursoTecnologico> listaTodosRecursos = recursoTecnologicoDao.ObtenerRecursos();
+            List<RecursoTecnologico> listaTodosRecursos = recursoTecnologicoDao.ObtenerRecursos();//este no esta?
             listaRecursos = new List<RecursoTecnologico>();
             List<string[]> listaRT = new List<string[]>();
 
@@ -81,7 +81,7 @@ namespace PPAI_Implementacion.Gestor
                 }
             }
 
-            OrdenarYAgruparRTPorCI(listaRT);
+            OrdenarYAgruparRTPorCI(listaRT);// no esta en vista ni en diagrama
             pantallaReserva.SolicitarSeleccionRT(listaRT);
         }
 
@@ -94,7 +94,7 @@ namespace PPAI_Implementacion.Gestor
         public void TomarSeleccionRT(int indexSeleccionado)
         {
             rtSeleccionado = listaRecursos[indexSeleccionado];
-            ObtenerTurnosReservablesRTSeleccionado();
+            ObtenerTurnosReservablesRTSeleccionado();//no coincide, esta mal el orden
         }
 
         public void ObtenerTurnosReservablesRTSeleccionado()
@@ -150,18 +150,18 @@ namespace PPAI_Implementacion.Gestor
         {
             turnoSeleccionado = listaTurnosFecha[indexSeleccionado].Item1;
             pantallaReserva.SolicitarConfirmacionReservaRT(rtSeleccionado.MostrarDatosRT(), rtSeleccionado.GetTipo().GetNombre(), turnoSeleccionado.MostrarTurno());
-        }
+        }//reserva solo??
 
-        public void TomarConfirmacionReservaRT(bool mail, bool wsp)
+        public void TomarConfirmacionReservaRT(bool mail, bool wsp)//rt?
         {
             GenerarReservaRTSeleccionado(mail, wsp);
         }
 
-        public void GenerarReservaRTSeleccionado(bool boolMail, bool wsp)
+        public void GenerarReservaRTSeleccionado(bool boolMail, bool wsp)//generar reserva
         {
             //Poner turno en reservado
             Estado estadoReservado = ObtenerEstadoReservado();
-            rtSeleccionado.RegistrarReservaTurno(turnoSeleccionado, estadoReservado, cientificoLogueado);
+            rtSeleccionado.RegistrarReservaTurno(turnoSeleccionado, estadoReservado, cientificoLogueado);//registrarReserva
 
             //Notificar a cientifico
             mail = ObtenerMailCientifico();
@@ -175,9 +175,9 @@ namespace PPAI_Implementacion.Gestor
             FinCU();
         }
 
-        public void GenerarMail(string email)
+        public void GenerarMail(string email)//falta en diagrama
         {
-            new InterfazMailReserva().EnviarNotificacionMail(email);
+            new InterfazMailReserva().EnviarNotificacionMail(email);//enviarmailReserva
         }
         public void GenerarWhatsapp(string telefono)
         {
